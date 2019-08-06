@@ -7,6 +7,9 @@ wget https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv
 hdfs dfs -put iris.csv /tmp/.
 ```
 
+## How to use
+Run (All) SparkMLlibPipeline_simplified.scala
+
 ## Compile
 NOT DEPENDS - I switched to use spark.jar.packages in spark-defaults.conf.
 ### Maven Setup
