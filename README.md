@@ -1,13 +1,22 @@
 # XGBoost (on CDSW)
 
-## Maven Setup
+
+## Data Preparation
+```
+wget https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv
+hdfs dfs -put iris.csv /tmp/.
+```
+
+## Compile
+NOT DEPENDS - I switched to use spark.jar.packages in spark-defaults.conf.
+### Maven Setup
 ```
 wget http://mirrors.ocf.berkeley.edu/apache/maven/maven-3/3.6.1/binaries/apache-maven-3.6.1-bin.tar.gz
 tar xzvf apache-maven-3.6.1-bin.tar.gz 
 export PATH=$PATH:/home/cdsw/apache-maven-3.6.1/bin
 ```
 
-## XGBoost Compile
+### XGBoost Compile
 ```
 git clone --recursive https://github.com/dmlc/xgboost
 cd xgboost
@@ -18,9 +27,4 @@ make -j4
 
 cd /home/cdsw/xgboost/jvm-packages
 mvn package
-```
-## Sample Data Download
-```
-wget https://raw.githubusercontent.com/uiuc-cse/data-fa14/gh-pages/data/iris.csv
-hdfs dfs -put iris.csv /tmp/.
 ```
