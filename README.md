@@ -34,11 +34,31 @@ mvn package
 
 or
 
+https://medium.com/@bogdan.cojocar/how-to-make-xgboost-available-in-the-spark-notebook-de14e425c948
+
 ```
 git clone --recursive https://github.com/dmlc/xgboost
 cd xgboost
 make -j4
 
 cd /home/cdsw/xgboost/jvm-packages
-mvn package
+mvn -DskipTests install
+```
+Note: You may fail with poor resources, e.g. 2GB memory. I succeeded to finish 4GB memory.
+
+```
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for XGBoost JVM Package 1.0.0-SNAPSHOT:
+[INFO] 
+[INFO] XGBoost JVM Package ................................ SUCCESS [  2.429 s]
+[INFO] xgboost4j_2.12 ..................................... SUCCESS [01:26 min]
+[INFO] xgboost4j-spark_2.12 ............................... SUCCESS [02:04 min]
+[INFO] xgboost4j-flink_2.12 ............................... SUCCESS [ 36.884 s]
+[INFO] xgboost4j-example_2.12 ............................. SUCCESS [  7.665 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  04:18 min
+[INFO] Finished at: 2019-11-08T04:31:50Z
+[INFO] ------------------------------------------------------------------------
 ```
