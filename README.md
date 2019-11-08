@@ -31,3 +31,14 @@ make -j4
 cd /home/cdsw/xgboost/jvm-packages
 mvn package
 ```
+
+or
+
+```
+git clone --recursive https://github.com/dmlc/xgboost
+cd xgboost
+make -j4
+
+cd /home/cdsw/xgboost/jvm-packages
+mvn package
+```
