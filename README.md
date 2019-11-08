@@ -44,7 +44,7 @@ make -j4
 cd /home/cdsw/xgboost/jvm-packages
 mvn -DskipTests install
 ```
-Note: You may fail with poor resources, e.g. 2GB memory. I succeeded to finish 4GB memory.
+Note: You may fail with poor resources, e.g. 2GB memory. I succeeded to finish with 4GB memory.
 
 ```
 [INFO] ------------------------------------------------------------------------
